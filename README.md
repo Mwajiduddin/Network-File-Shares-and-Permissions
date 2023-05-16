@@ -11,11 +11,19 @@ In this tutorial we will be creating and deploying a virtual machine within the 
 <h2>Tutorial Guideline</h2>
 
 
-<h3>Step 1: Creating a resource group</h3>
+<h3>Step 1: Creating file shares with permissions</h3>
 
+You should have your Domain Controller and Client VMs still up and running from the [previous tutorial](https://github.com/Mwajiduddin/Joining-a-client-to-a-domain-controller-virtual-machine-in-Azure) and we will start this tutorial in our Domain Controller virtual machine. Go to the C:\ drive and create these four folders: read access, write access, no access, and accounting; the folders are named based on their function.
 
+Now we are going to set the permissions and to whom it will be shared to for each of these folders shown below:
 
+| Folder:       | Group:         |  Permission: | 
+| ------------- | -------------  |------------- |
+| read access   | Domain Users   | Read         |
+| write access  | Domain Users   | Read/Write   |
+| no access     | Domain Admins  | Read/Write   |
 
+We will come back to the accounting folder later in this tutorial.
 
 
 
