@@ -1,4 +1,4 @@
-<h1 align="center">Configuring Network File Shares and Permissions</h1>
+<h1 align="center">Configuring network file shares and permissions</h1>
 
 <p align="center">
 <img src="https://github.com/Mwajiduddin/Mwajiduddin/blob/main/images/fileshares.png" height="60%" width="45%"/>
