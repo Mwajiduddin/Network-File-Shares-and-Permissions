@@ -5,7 +5,7 @@
 </p>
 
 <h1>Introduction</h1>
-In this tutorial we will be setting up file shares and permissions in both of our virtual machines from the previous tutorial.
+In this tutorial we will be using both of our virtual machines from the previous tutorial to set up file shares and change its permissions .
 
 
 <h2>Tutorial Guideline</h2>
