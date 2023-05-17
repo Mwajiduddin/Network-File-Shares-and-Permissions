@@ -6,7 +6,7 @@
 
 <h1>Introduction</h1>
 
-In this tutorial we will be using both of our virtual machines from the [previous tutorial](https://github.com/Mwajiduddin/Joining-a-client-to-a-domain-controller-virtual-machine-in-Azure) to set up file shares and changing its permissions .
+In this tutorial we will be using both of our virtual machines from the [previous tutorial](https://github.com/Mwajiduddin/Joining-a-client-to-a-domain-controller-virtual-machine-in-Azure) to set up file shares and changing its permissions.
 
 
 <h2>Tutorial Guideline</h2>
