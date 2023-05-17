@@ -1,15 +1,14 @@
-<h1 align="center">Network File Shares and Permissions</h1>
+<h1 align="center">Configuring Network File Shares and Permissions</h1>
 
 <p align="center">
 <img src="https://github.com/Mwajiduddin/Mwajiduddin/blob/main/images/fileshares.png" height="60%" width="45%"/>
 </p>
 
 <h1>Introduction</h1>
-In this tutorial we will be creating and deploying a virtual machine within the Azure cloud environment. Microsoft Azure is a public cloud platform that offers a large collection of tools and computing services.
+In this tutorial we will be setting up file shares and permissions in both of our virtual machines from the previous tutorial.
 
 
 <h2>Tutorial Guideline</h2>
-
 
 <h3>Step 1: Creating file shares with permissions</h3>
 
