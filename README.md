@@ -6,7 +6,7 @@
 
 <h1>Introduction</h1>
 
-In this tutorial we will be using both of our virtual machines from the [previous tutorial](https://github.com/Mwajiduddin/Joining-a-client-to-a-domain-controller-virtual-machine-in-Azure) to set up file shares and changing its permissions.
+In this tutorial we will be using both of our virtual machines from the [previous tutorial](https://github.com/Mwajiduddin/Joining-a-client-to-a-domain-controller-virtual-machine-in-Azure) to set up file shares and change its permissions.
 
 
 <h2>Tutorial Guidelines</h2>
@@ -19,7 +19,7 @@ You should have your Domain Controller and Client VMs still up and running from 
 <img src="https://github.com/Mwajiduddin/Mwajiduddin/blob/main/images/d1.png" />
 </p>
 
-Now we are going to set the permissions and to whom it will be shared to for each of these folders shown below:
+Now we are going to set the permissions and to which group it will be shared to shown below:
 
 | Folder:       | Group:         |  Permission: | 
 | ------------- | -------------  |------------- |
@@ -27,7 +27,7 @@ Now we are going to set the permissions and to whom it will be shared to for eac
 | write access  | Domain Users   | Read/Write   |
 | no access     | Domain Admins  | Read/Write   |
 
-We will come back to the accounting folder later in this tutorial. To set the permission and shares, right click on the folder and select Properties, go to the "Sharing" tab, click on "Share", a window will appear where you will type in the Group name you want to view this folder then click on "Add". Change the folder permission by clicking on the black downward arrow underneath the "Permission Level" and selecting the proper permission then click "Share" and "Done." 
+We will come back to the accounting folder later in this tutorial. To set the permission and shares, right click on the folder and select Properties, go to the "Sharing" tab, click on "Share", a window will appear where you will type in the Group name you would like to view this folder then click on "Add". Change the folder permission by clicking on the black downward arrow underneath the "Permission Level" column and selecting the proper permission then click "Share" and "Done." 
 
 <p align="center">
 <img src="https://github.com/Mwajiduddin/Mwajiduddin/blob/main/images/d2.png" />
@@ -39,7 +39,7 @@ We will come back to the accounting folder later in this tutorial. To set the pe
 
 <h3>Step 2: Accessing folders as a normal client user</h3>
 
-For this next step we need the network path where these folders are and this can be found by right clicking on one of the folders, selecting Properties, going into the Sharing tab, and underneath Network Path then copy the first two backslash and hostname. 
+For this next step we need the network path to where these folders are located and this can be found by right clicking on one of the folders, selecting Properties, going into the Sharing tab, and underneath Network Path (just copy the first two backslash and hostname). 
 
 <p align="center">
 <img src="https://github.com/Mwajiduddin/Mwajiduddin/blob/main/images/d4.png" />
@@ -56,19 +56,19 @@ You'll notice that you can't access the "no access" folder because only Admins a
 
 <h3>Step 3: Obtaining access to the "accounting" folders as a normal client user</h3>
 
-In your Domain Controller VM, go to Active Directory Users and Computers by searching it the Windows search bar, right click on your root domain name and create a new Organization Unit and name is "SECURITY GROUP." 
+In your Domain Controller VM, go to "Active Directory Users and Computers" by searching it the Windows search bar, right click on your root domain name, create a new Organization Unit and name it "SECURITY GROUP." 
 
 <p align="center">
 <img src="https://github.com/Mwajiduddin/Mwajiduddin/blob/main/images/d6.png" />
 </p>
 
-Create a new group inside "SECURITY GROUP" by right clicking, hover to "New" and selecting "Group." Name the group "ACCOUNTANTS" and press OK.
+Create a new group inside "SECURITY GROUP" by right clicking, hovering over to "New" and selecting "Group." Name the group "ACCOUNTANTS" and press OK.
 
 <p align="center">
 <img src="https://github.com/Mwajiduddin/Mwajiduddin/blob/main/images/d7.png" />
 </p>
 
-Now go to the "accounting" folder you made in your C:\ drive and share it "ACCOUNTANTS" and give it read/write access.
+Now go to the "accounting" folder you made in your C:\ drive and share it to "ACCOUNTANTS" and give it read/write access permission.
 
 <p align="center">
 <img src="https://github.com/Mwajiduddin/Mwajiduddin/blob/main/images/d8.png" />
@@ -80,13 +80,13 @@ If we go back to our Client VM and try clicking on the accounting folder you'll 
 <img src="https://github.com/Mwajiduddin/Mwajiduddin/blob/main/images/d9.png" />
 </p>
 
-Then go back to your Domain Controller VM, open ACCOUNTANTS in SECURITY GROUP, click on the "Members" tab, select "Add", type in your user in the box and click on "Check Names" and press OK.
+Go back to your Domain Controller VM, open ACCOUNTANTS in SECURITY GROUP, click on the "Members" tab, select "Add", type in your user in the box, click on "Check Names" and press OK.
 
 <p align="center">
 <img src="https://github.com/Mwajiduddin/Mwajiduddin/blob/main/images/d10.png" />
 </p>
 
-Log out of the Client VM and log back in as the same user (remember from the previous tutorial that the password for the users is "Password1" when you try to log back in). Go to the "accounting" folder location and you'll see that you can finally open the folder. Once you're done with this lab remember to delete your resource group in Azure.
+Log out of the Client VM and log back in as the same user (remember from the previous tutorial that the password is "Password1" when you try to log back in). Go to the "accounting" folder location and you'll see that you can finally open the folder. Once you're done with this lab remember to delete your resource group in Azure.
 
 <p align="center">
 <img src="https://github.com/Mwajiduddin/Mwajiduddin/blob/main/images/d11.png" />
