@@ -19,7 +19,7 @@ You should have your Domain Controller and Client VMs still up and running from 
 <img src="https://github.com/Mwajiduddin/Mwajiduddin/blob/main/images/d1.png" />
 </p>
 
-Now we are going to set the permissions and to which group it will be shared to shown below:
+Now we are going to set the permissions and to which group it will be shared to as shown below:
 
 | Folder:       | Group:         |  Permission: | 
 | ------------- | -------------  |------------- |
