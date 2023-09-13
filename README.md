@@ -4,7 +4,7 @@
 <img src="https://github.com/Mwajiduddin/Mwajiduddin/blob/main/images/fileshares.png" height="60%" width="45%"/>
 </p>
 
-<h1>Introduction</h1>
+<h1>Overview</h1>
 
 In this tutorial we will be using both of our virtual machines from the [previous tutorial](https://github.com/Mwajiduddin/Joining-a-client-to-a-domain-controller-virtual-machine-in-Azure) to set up file shares and change its permissions.
 
